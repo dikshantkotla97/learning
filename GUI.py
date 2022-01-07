@@ -1,0 +1,31 @@
+import tkinter as tk
+
+def volume():
+    height_given = int(input_height.get())
+    depth_given = int(input_depth.get())
+    width_given = int(input_width.get())
+    result = height_given * depth_given * width_given
+    result_text = "Result: " + str(result)
+    label4.config(text=result_text)
+
+root = tk.Tk()
+label1 = tk.Label(root, text="Height")
+label1.pack()
+input_height = tk.IntVar()
+input_h = tk.Entry(root, textvariable=input_height)
+input_h.pack()
+label2 = tk.Label(root, text="Depth")
+label2.pack()
+input_depth = tk.IntVar()
+input_d = tk.Entry(root, textvariable=input_depth)
+input_d.pack()
+label3 = tk.Label(root, text="Width")
+label3.pack()
+input_width = tk.IntVar()
+input_w = tk.Entry(root, textvariable=input_width)
+input_w.pack()
+button1 = tk.Button(root, text="Calculate", command=volume)
+button1.pack()
+label4 = tk.Label(root, text="Result: X")
+label4.pack()
+root.mainloop()

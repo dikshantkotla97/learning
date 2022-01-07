@@ -1,0 +1,6 @@
+a=input("first number ")
+b=input("second number ")
+print("sum is ", int(a)+int(b))
+print("remainder is ", int(a)%int(b))
+print("average is ", (int(a)+int(b))/2)
+print("square is ", (int(a))**2) 
